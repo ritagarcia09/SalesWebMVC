@@ -37,9 +37,13 @@ namespace SalesWebMVC
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            //services.AddDbContext<SalesWebMVCContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString("SalesWebMVCContext")));
+
             services.AddDbContext<SalesWebMVCContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("SalesWebMVCContext")));
+            options.UseInMemoryDatabase(
+            Configuration.GetConnectionString("SalesWebMVCContext")));
 
             services.AddScoped<SeedingService>();
 
