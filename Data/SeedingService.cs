@@ -32,10 +32,10 @@ namespace SalesWebMVC.Data
             Department d3 = new Department(3, "Quality");
             Department d4 = new Department(4, "Support");
 
-            Seller s1 = new Seller(1, "Maria Silva", "maria.silva@salesmvc.com", new DateTime(1991, 9, 25), 10.000, d1);
-            Seller s2 = new Seller(1, "João Souza", "joao.souza@salesmvc.com", new DateTime(1992, 8, 26), 10.000, d2);
-            Seller s3 = new Seller(1, "Pedro Carvalho", "pedro.carvalho@salesmvc.com", new DateTime(1993, 11, 27), 10.000, d3);
-            Seller s4 = new Seller(1, "José Santos", "jose.santos@salesmvc.com", new DateTime(1984, 12, 28), 10.000, d4);
+            Seller s1 = new Seller(1, "Maria Silva", "maria.silva@salesmvc.com", new DateTime(1991, 8, 25), 8300, d1);
+            Seller s2 = new Seller(1, "João Souza", "joao.souza@salesmvc.com", new DateTime(1992, 9, 26), 6000, d2);
+            Seller s3 = new Seller(1, "Pedro Carvalho", "pedro.carvalho@salesmvc.com", new DateTime(1993, 10, 27), 7500, d3);
+            Seller s4 = new Seller(1, "José Santos", "jose.santos@salesmvc.com", new DateTime(1994, 11, 28), 9000, d4);
 
             SalesRecord r1 = new SalesRecord(1, new DateTime(2019, 11, 1), 10000.0, SalesStatus.Billed, s1);
             SalesRecord r2 = new SalesRecord(2, new DateTime(2019, 11, 2), 10000.0, SalesStatus.Billed, s2);
