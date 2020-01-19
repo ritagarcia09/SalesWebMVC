@@ -27,10 +27,10 @@ namespace SalesWebMVC.Data
                 return;  // DB has been seeded
             }
 
-            Department d1 = new Department(1, "Infrastructure");
-            Department d2 = new Department(2, "Information Technology");
-            Department d3 = new Department(3, "Quality");
-            Department d4 = new Department(4, "Support");
+            Department d1 = new Department(1, "Books");
+            Department d2 = new Department(2, "Technology");
+            Department d3 = new Department(3, "Accessories");
+            Department d4 = new Department(4, "Imported");
 
             Seller s1 = new Seller(1, "Maria Silva", "maria.silva@salesmvc.com", new DateTime(1991, 8, 25), 8300, d1);
             Seller s2 = new Seller(1, "João Souza", "joao.souza@salesmvc.com", new DateTime(1992, 9, 26), 6000, d2);
