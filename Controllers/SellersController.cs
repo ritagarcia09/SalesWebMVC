@@ -29,21 +29,21 @@ namespace SalesWebMVC.Controllers
         public async Task<IActionResult> Create()
         {
             var departments = await _departamentService.FindAllAsync();
-            var viewModel = new SellerFormViewModel { Departments = departments };
+            var viewModel = new SellerFormViewModel { Departments = departments,Seller = new Seller() };
             return View(viewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Seller seller)
-        {
+        public async Task<IActionResult> Create(SellerFormViewModel model)
+        {            
             if (!ModelState.IsValid)
             {
                 var departments = await _departamentService.FindAllAsync();
-                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                var viewModel = new SellerFormViewModel { Seller =  model.Seller, Departments = departments };
                 return View(viewModel);
             }
-            await _sellerService.InsertAsync(seller);
+            await _sellerService.InsertAsync(model.Seller);
             return RedirectToAction(nameof(Index));
         }
 
